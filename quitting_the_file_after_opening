@@ -1,0 +1,32 @@
+package demoproject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class current_url {
+	public static void main(String args[]) {
+		WebDriver d=new ChromeDriver();
+		d.navigate().to("https://demowebshop.tricentis.com/");
+		
+		String url=d.getCurrentUrl();
+		if(url.contains(url)) {
+			System.out.println("testcase pass");
+			
+		}
+		else {
+			System.out.print("test case fail");
+		}
+		d.findElement(By.xpath("//a[text()='Register']")).click();
+		String url1=d.getCurrentUrl();
+		if(url1.contains(url1)) {
+			System.out.println("testcase pass");
+			}
+		else {
+			System.out.println("testcase fail");
+
+		}
+		d.quit();
+	}
+
+}
