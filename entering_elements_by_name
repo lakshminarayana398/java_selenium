@@ -1,0 +1,23 @@
+package demoproject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class working_with_name_locator {
+	public static void main(String args[]) throws InterruptedException {
+	WebDriver d=new ChromeDriver();
+	d.navigate().to("https://demowebshop.tricentis.com");
+	d.manage().window().maximize();
+	Thread.sleep(1000);
+	d.findElement(By.xpath("//a[text()='Register']")).click();
+	d.findElement(By.name("Gender")).click();
+	d.findElement(By.name("FirstName")).sendKeys("hbdvks");
+	Thread.sleep(1000);
+	d.findElement(By.name("LastName")).sendKeys("y");
+	d.findElement(By.name("Email")).sendKeys("harsha@123@gmail.com");
+	d.findElement(By.name("Password")).sendKeys("assdhsdgk");
+	d.findElement(By.name("Confirm password")).sendKeys("assdhsdgk");
+	}
+
+}
