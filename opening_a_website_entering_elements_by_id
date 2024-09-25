@@ -1,0 +1,25 @@
+package demoproject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class gender {
+	public static void main(String args[]) throws InterruptedException
+	{
+		WebDriver d=new ChromeDriver();
+		d.navigate().to("https://demowebshop.tricentis.com");
+		d.manage().window().maximize();
+		Thread.sleep(1000);
+		d.findElement(By.xpath("//a[text()='Register']")).click();
+		d.findElement(By.id("gender-male")).click();
+		Thread.sleep(1000);
+		d.findElement(By.id("FirstName")).sendKeys("lakshmi");
+		Thread.sleep(1000);
+		d.findElement(By.id("LastName")).sendKeys("y");
+		d.findElement(By.id("Email")).sendKeys("harsha@123@gmail.com");
+		d.findElement(By.id("Password")).sendKeys("assdhsdgk");
+		d.findElement(By.id("Confirm password")).sendKeys("assdhsdgk");
+
+		}
+}
